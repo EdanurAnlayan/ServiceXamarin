@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServiceXamarin.MainPage"
+             BackgroundColor="#f0ece3">
+
+    <ContentPage.Content>
+        <StackLayout Padding="35" VerticalOptions="Center">
+            <Entry
+                   x:Name="EntryUsername"
+                   Placeholder="User Name"
+                   PlaceholderColor="#c7b198"
+                   TextColor="#596e79"/>
+            
+            <Entry
+                   x:Name="EntryPassword"
+                   Placeholder="Password"
+                   PlaceholderColor="#c7b198"
+                   TextColor="#596e79"
+                   IsPassword="True"/>
+            
+            <Button Text="Login"
+                    TextColor="#f0ece3"
+                    BackgroundColor="#596e79"
+                    x:Name="ButtonLogin"
+                    Clicked="ButtonLogin_Clicked"
+                    />
+            <ActivityIndicator x:Name="activityIndicator" IsRunning="{Binding IsBusy}" VerticalOptions="Center" HorizontalOptions="Center" Color="Blue"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+
+</ContentPage>

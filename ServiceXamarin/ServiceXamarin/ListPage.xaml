@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServiceXamarin.ListPage"
+             BackgroundColor="#f0ece3"
+             >
+    <ContentPage.Content >
+        <StackLayout Orientation="Vertical" Padding="10">
+            <StackLayout>
+                <Label Padding="10" Text="List of museum" TextColor="#596e79" FontAttributes="Bold" FontSize="Medium"/>
+                <BoxView Color="#596e79" HeightRequest="1"/>
+               
+                <ListView x:Name="listview" SeparatorColor="#596e79" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding DistName}" Detail="{Binding SectionName}" TextColor="#596e79" DetailColor="#c7b198"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                <Button x:Name="LogOut" Text="LogOut" BackgroundColor="#596e79" TextColor="#f0ece3" Clicked="LogOut_Clicked"/>
+                <Button x:Name="Refresh" Text="Refresh" BackgroundColor="#596e79" TextColor="#f0ece3" Clicked="Refresh_Clicked"/>
+            </StackLayout>
+            <ActivityIndicator x:Name="activityIndicator" IsRunning="{Binding IsBusy}" VerticalOptions="Center" HorizontalOptions="Center" Color="Blue"/>
+        </StackLayout>
+    </ContentPage.Content>
+    
+    
+</ContentPage>
